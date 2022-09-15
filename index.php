@@ -21,13 +21,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+    font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1 {
+    background-color: aqua;
+    color : #555;
+    font-size : 2rem;
+}
+    </style>
 </head>
 <body>
     <main>
+        test
     <?php
 		if ( have_posts() ) :
             while ( have_posts() ) :
 				the_post(); 
+
                 the_title('<h1>','</h1>');
                 the_content(null, true);
             endwhile;
