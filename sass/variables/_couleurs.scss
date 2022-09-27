@@ -1,1 +1,26 @@
-$couleur__background-body : rgb(171, 236, 147);
+/*
+$couleur__background--body: rgb(171, 236, 147);
+
+$couleur__background--h1: rgba(81, 108, 190, 0.971);
+$couleur__background--h2h3h4: rgb(16, 12, 114);
+
+$couleur__background--code: #bbb;
+*/
+
+$couleur__background--body: rgb(171, 236, 147);
+/* ----------------------------------- Couleur d'arrière plan titres */
+$couleur__background--h1: rgba(233, 237, 248, 0.971);
+$couleur__background--h2h3h4: rgb(215, 215, 231);
+$couleur__background--h5h6: rgb(154, 153, 172);
+$couleur__background--code: rgb(213, 208, 230);
+
+/* --------------------------------------- couleur   color :  */
+$couleur__h1: rgba(25, 41, 88, 0.971);
+$couleur__h2h3h4: rgb(16, 12, 114);
+$couleur__h5h6: rgb(16, 12, 114);
+$couleur__code: rgb(14, 13, 17);
+
+/* --------------------- Couleurs des liens */
+$couleur__link: #55f;
+$couleur__link--visited: #3f3;
+$couleur__link--hover: #8f8;
