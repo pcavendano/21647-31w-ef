@@ -1,24 +1,23 @@
-.menu-primaire-container {
+// nav
+.menu__principal {
   background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 4rem;
-  flex: 1;
-
-  // nav
-
+  margin: 0;
+  //ul
   .menu {
-    //ul
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 0;
   }
+  //li
   .menu-item {
-    //li
   }
   a {
+    display: block;
     text-decoration: none;
     background-color: #000;
     color: #fff;
@@ -27,7 +26,7 @@
   a:hover {
     background-color: #555;
   }
-}
+} // fin .menu__principal
 
 /* transformation en CSS */
 .menu-primaire-container {
