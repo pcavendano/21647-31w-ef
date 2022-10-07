@@ -351,7 +351,7 @@ html {
 }
 
 body {
-  background-color: rgb(171, 236, 147);
+  background-color: rgb(173, 195, 215);
 }
 
 main {
@@ -366,8 +366,16 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: clamp(0.9rem, 2vw, 2.5rem);
 }
 
 p {
@@ -623,10 +631,8 @@ figure {
 .menu__aside .menu-item {}
 .menu__aside a {}
 */
-.site {
-  display: grid;
-  grid-template-columns: 25% auto;
-  grid-template-areas: "header header" "sidebar main" "footer footer";
+.site__title {
+  font-size: clamp(2rem, 4vw, 5rem);
 }
 
 .site__header {
@@ -646,8 +652,14 @@ figure {
   grid-area: footer;
 }
 
-.no-sidebar .site {
+.site {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: "sidebar" "header" "main" "footer";
+}
+@media screen and (min-width: 700px) {
+  .site {
+    grid-template-columns: 25% auto;
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+  }
 }/*# sourceMappingURL=style.css.map */
