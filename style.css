@@ -375,7 +375,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(0.9rem, 2vw, 2.5rem);
+  font-size: clamp(1.3rem, 2vw, 3rem);
 }
 
 p {
