@@ -635,6 +635,16 @@ figure {
   font-size: clamp(2rem, 4vw, 5rem);
 }
 
+.site__footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.site__footer div {
+  flex: 1;
+  border: 1px solid #aaa;
+}
+
 .site__header {
   grid-area: header;
 }
