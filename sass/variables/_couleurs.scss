@@ -19,13 +19,14 @@ $couleur__h1: rgba(25, 41, 88, 0.971);
 $couleur__h2h3h4: rgb(16, 12, 114);
 $couleur__h5h6: rgb(16, 12, 114);
 $couleur__code: rgb(14, 13, 17);
-
-$couleur__site__title: rgb(29, 46, 74);
-
+/* --------------------- Couleurs des liens du titre principal*/
+$couleur__link__site__title: rgb(8, 52, 117);
+$couleur__link__site__title--visited: rgb(11, 52, 100);
+$couleur__link__site__title--hover: rgb(38, 74, 114);
 /* --------------------- Couleurs des liens */
-$couleur__link: #55f;
-$couleur__link--visited: #3f3;
-$couleur__link--hover: #8f8;
+$couleur__link: rgb(69, 127, 214);
+$couleur__link--visited: rgb(35, 125, 228);
+$couleur__link--hover: rgb(32, 96, 138);
 
 $couleur__link__aside: rgb(14, 27, 45);
 $couleur__link__aside--visited: rgb(12, 63, 76);

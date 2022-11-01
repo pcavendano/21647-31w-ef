@@ -43,6 +43,26 @@ a {
     outline: 0;
   }
 }
-
+/* ---------------------------------------------------------- Titre principal du site */
 .site__title a {
+  color: $couleur__link__site__title;
+
+  &:visited {
+    color: $couleur__link__site__title--visited;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $couleur__link__site__title--hover;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }

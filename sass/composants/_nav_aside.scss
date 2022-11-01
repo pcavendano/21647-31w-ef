@@ -1,5 +1,6 @@
 .menu__aside {
   display: flex;
+
   .menu {
     list-style-type: none;
     padding: 0;
@@ -10,6 +11,8 @@
   }
 
   a {
+    text-decoration: none;
+    padding: 5px 3px;
   }
 }
 /*

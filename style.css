@@ -23,6 +23,7 @@ $couleur__background--code: #bbb;
 */
 /* ----------------------------------- Couleur d'arrière plan titres */
 /* --------------------------------------- couleur   color :  */
+/* --------------------- Couleurs des liens du titre principal*/
 /* --------------------- Couleurs des liens */
 /* ----------------------------- couleur bouton */
 /* ----------------------------- couleur fields input text */
@@ -375,7 +376,27 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(1.3rem, 2vw, 3rem);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+}
+
+h4 {
+  font-size: clamp(1.3rem, 2vw, 1.3rem);
+}
+
+h5 {
+  font-size: clamp(1.3rem, 2vw, 1.1rem);
+}
+
+h6 {
+  font-size: clamp(1.3rem, 2vw, 1rem);
 }
 
 p {
@@ -431,13 +452,13 @@ big {
 }
 
 a {
-  color: #55f;
+  color: rgb(69, 127, 214);
 }
 a:visited {
-  color: #3f3;
+  color: rgb(35, 125, 228);
 }
 a:hover, a:focus, a:active {
-  color: #8f8;
+  color: rgb(32, 96, 138);
 }
 a:focus {
   outline: thin dotted;
@@ -460,6 +481,23 @@ a:hover, a:active {
   outline: thin dotted;
 }
 .menu__aside a:hover, .menu__aside a:active {
+  outline: 0;
+}
+
+/* ---------------------------------------------------------- Titre principal du site */
+.site__title a {
+  color: rgb(8, 52, 117);
+}
+.site__title a:visited {
+  color: rgb(11, 52, 100);
+}
+.site__title a:hover, .site__title a:focus, .site__title a:active {
+  color: rgb(38, 74, 114);
+}
+.site__title a:focus {
+  outline: thin dotted;
+}
+.site__title a:hover, .site__title a:active {
   outline: 0;
 }
 
@@ -625,6 +663,11 @@ figure {
   padding: 0;
   margin: 0;
 }
+.menu__aside a {
+  text-decoration: none;
+  padding: 5px 3px;
+}
+
 /*
 .menu__aside{}
 .menu__aside .menu {}
@@ -647,23 +690,27 @@ figure {
 
 .site__header {
   grid-area: header;
+  background-color: #ddd;
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  background-color: #ccc;
 }
 
 .widget__area-1 {
   grid-area: sidebar-1;
+  background-color: #999;
 }
 
 .widget__area-2 {
-  grid-area: sidebar-2;
+  background-color: #888;
 }
 
 .site__footer {
   grid-area: footer;
+  background-color: #000;
 }
 
 .site {
@@ -674,6 +721,6 @@ figure {
 @media screen and (min-width: 700px) {
   .site {
     grid-template-columns: 25% auto;
-    grid-template-areas: "header header" "sidebar-1 main" "sidebar-2 main" "footer footer";
+    grid-template-areas: "header header" "sidebar-1 main" "sidebar-2 main" ". main" "footer footer";
   }
 }/*# sourceMappingURL=style.css.map */
