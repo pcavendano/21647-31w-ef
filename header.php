@@ -27,7 +27,7 @@
 
 	<?php  /* Affichage du menu principal */
 			wp_nav_menu(array(
-			"menu" => "principal",
+			"menu" => "primaire",
 			"container" => "nav",
 			"container_class" => "menu__principal")); ?>
 
