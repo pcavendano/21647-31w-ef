@@ -75,27 +75,36 @@ function mon_31w_register_nav_menu(){
 add_action( 'after_setup_theme', 'mon_31w_register_nav_menu', 0 );
 
 
-/* --------------------------------------------- pour filtre chacun des élément du menu */
-function igc31w_filtre_choix_menu($obj_menu){
-    //var_dump($obj_menu);
-	//die();
+/**
+ * filtre le menu «aside»
+ * @arg  $obj_menu, $arg
+ */
 
+
+function igc31w_filtre_choix_menu($obj_menu, $arg){
+    //echo "/////////////////  obj_menu";
+    // var_dump($obj_menu);
+    //  echo "/////////////////  arg";
+    //  var_dump($arg);
+ 
+    if ($arg->menu == "aside"){
     foreach($obj_menu as $cle => $value)
     {
-        //print_r($value);
-
+      //  print_r($value);
+	  /* retirer le sigle numérique du cours */
        $value->title = substr($value->title,7);
-	   $value->title = substr($value->title,0,strpos($value->title,'('));
-       $value->title = wp_trim_words($value->title,3,"...");
-       // echo $value->title . '<br>';
- 
+	   /* retirer la durée du cours ex: (75h) */
+	   $value->title = substr($value->title,0,strpos($value->title, '('));
+       $value->title = wp_trim_words($value->title,3," ... ");
+        //echo $value->title . '<br>';
+     } 
     }
-
-	//die();
+    //die();
     return $obj_menu;
-
 }
-add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu");
+
+add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu", 10,2);
+
 
 
 /* -------------------------------------------------------- Initialisation des sidebar */
