@@ -17,18 +17,24 @@
 <?php get_header(); ?>
 
     <main class="site__main">
+    <section class="liste">
     <?php
 		if ( have_posts() ) :
             while ( have_posts() ) :
 				the_post(); ?>
+                <article class="liste__cours">
                 <h1><a href="<?php the_permalink(); ?>">
                 <?php the_title(); ?></a></h1>
                 <h2>Durée du cours: <?php the_field('duree'); ?></h2>
-                <?php the_content(null, true); ?>
+                <?php the_content(null, true); 
+                //wp_trim_words()
+                ?>
+              
+                <article>
                 
             <?php endwhile; ?>
         <?php endif; ?>
-  
+    </section>
     </main>    
 <?php get_footer(); ?>
 </html>

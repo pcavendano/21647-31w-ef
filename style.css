@@ -716,6 +716,43 @@ figure {
 .menu__aside .menu-item {}
 .menu__aside a {}
 */
+.menu__evenement .menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #bbb;
+}
+
+.menu__evenement .menu-item {
+  width: 25%;
+}
+
+.menu__evenement .menu-item a {
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.evenement__porte {
+  background-color: aquamarine;
+}
+
+.evenement__projet {
+  background-color: rgb(127, 153, 255);
+}
+
+.evenement__stage {
+  background-color: rgb(255, 255, 127);
+}
+
+.menu__item__icone {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #aaa;
+}
+
 .site__title {
   font-size: clamp(2rem, 4vw, 5rem);
 }
@@ -728,6 +765,16 @@ figure {
 .site__footer div {
   flex: 1;
   border: 1px solid #aaa;
+}
+
+.liste {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.liste__cours {
+  flex: 0 1 20%;
 }
 
 .site__header {
