@@ -24,19 +24,26 @@ wp_nav_menu(array(
     "menu"=>"evenement",
     "container"=>"nav",
     "container_class"=>"menu__evenement"
-));
+));?>
 
-		if ( have_posts() ) :
+<section class="liste">
+	<?php	if ( have_posts() ) :
             while ( have_posts() ) :
 				the_post(); ?>
+                <article class="liste__cours">
                 <h1><a href="<?php the_permalink(); ?>">
                 <?php the_title(); ?></a></h1>
                 
-                <?php the_content(null, true); ?>
-                
+            <?php
+            if ( has_post_thumbnail() ) {
+                the_post_thumbnail('thumbnail');
+            }
+            ?>
+                <?= wp_trim_words(get_the_excerpt(),10," ... "); ?>
+                </article>  
             <?php endwhile; ?>
         <?php endif; ?>
-  
+        </section>
     </main>    
 <?php get_footer(); ?>
 </html>
