@@ -1,7 +1,17 @@
-.site__branding {
-}
 .site__title {
   font-size: clamp(2rem, 4vw, 5rem);
 }
 .site__description {
+}
+.site__branding__examen{
+  display: flex;
+  margin: 1rem;
+}
+.site__title__icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.sidebar__search{
+  margin: .5rem;
 }
