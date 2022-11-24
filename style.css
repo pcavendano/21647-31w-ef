@@ -824,7 +824,10 @@ figure {
 .sidebar__search{
   margin: .5rem;
 }
-
+.search__results__li{
+  list-style-type: none;
+  background-color: #d2d0c6;
+}
 
 @media screen and (min-width: 700px) {
   .site {

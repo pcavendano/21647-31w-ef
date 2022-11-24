@@ -1,53 +1,28 @@
+<?php get_header(); ?>
 <?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package ef
- */
-
-get_header();
-?>
-
-	<main id="primary" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'ef' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
+$s=get_search_query();
+$args = array(
+	's' =>$s
+);
+// The Query
+$the_query = new WP_Query( $args );
+if ( $the_query->have_posts() ) {
+	_e("<h2 style='font-weight:bold;color:#000'>Search Results for: ".get_query_var('s')."</h2>");
+	while ( $the_query->have_posts() ) {
+		$the_query->the_post();
 		?>
+        <li class="search__results__li">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </li>
+		<?php
+	}
+}else{
+	?>
+    <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
+    <div class="alert alert-info">
+        <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+    </div>
+<?php } ?>
 
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
