@@ -219,7 +219,29 @@ function my_register_sidebars() {
 	/* Repeat register_sidebar() code for additional sidebars. */
 }
 
+register_sidebar(
+	array(
+		'id'            => 'header-1',
+		'name'          => __( 'Sidebar - header-1' ),
+		'description'   => __( 'Premier header aside ' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-recherche">',
+		'after_title'   => '</h3>',
+	)
+);
 
+register_sidebar(
+	array(
+		'id'            => 'header-2',
+		'name'          => __( 'Sidebar - header-2' ),
+		'description'   => __( 'Deuxième header aside ' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-medias-sociaux">',
+		'after_title'   => '</h3>',
+	)
+);
 
 /**
  *

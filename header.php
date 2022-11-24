@@ -41,6 +41,9 @@
 			<h1 class="site__title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</h1>
+
+            <?php get_sidebar('header-1');?>
+			<?php get_sidebar('header-2');?>
 		<?php
 			$underscore_description = get_bloginfo( 'description', 'display' );
 			if ( $underscore_description || is_customize_preview() ) : ?>
